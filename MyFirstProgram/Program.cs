@@ -6,7 +6,7 @@ internal class Program
     private static void Main(string[] args)
     {
         //Find the hypotenuse
-        Console.WriteLine("Enter side A: ");
+        Console.WriteLine("Enter side Ayooo: ");
         double a = Convert.ToDouble(Console.ReadLine());
 
         Console.WriteLine("Enter side B: ");
