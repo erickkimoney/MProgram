@@ -16,8 +16,8 @@ internal class Program
         //Console.WriteLine("The hypotenuse of this triangle is: " + c);
 
         //String methods
-        String fullName = "Bro Code";
-        String phoneNumber = "123-456-7890";
+        //String fullName = "Bro Code";
+        //String phoneNumber = "123-456-7890";
 
         //Console.WriteLine(fullName);
         //fullName = fullName.ToUpper();
@@ -57,7 +57,7 @@ internal class Program
         //{
         //    Console.WriteLine("Your name is " + name);
         //}
-        
+
         //switch statements
         //Console.WriteLine("What day is it today?");
         //String day = Console.ReadLine();
@@ -88,8 +88,61 @@ internal class Program
         //    default:
         //        Console.WriteLine(day + " is not a day");
         //        break;
+
+        //Logical operators
+        //Console.WriteLine("What is the temperature outside");
+        //double temp = Convert.ToDouble(Console.ReadLine());
+        //Console.WriteLine("Temperature is " + temp);
+        //if (temp >= 10 && temp <= 50)
+        //{
+        //    Console.WriteLine("It is warm outside");
+        //}
+        //else if (temp <= -50 || temp >= 50) ;
+        //{
+        //    Console.WriteLine("Do not go outside");
+        //}
+
+        //while loop
+        //Console.Write("Enter your name: ");
+        //String name = "";
+
+        //while (name == "")
+        //{
+        //    Console.Write("Enter your name ");
+        //    name = Console.ReadLine();
+        //}
+
+        //Console.WriteLine("Hello " +name);
+
+        //for loop
+
+        //for(int i = 1; i<10; i+=2)
+        //{
+        //    Console.WriteLine(i);
+        //}
+        //for (int i= 10; i>0; i--)
+        //{
+        //    Console.WriteLine(i);
+        //}
+        //Console.WriteLine("Happy new year");
+
+        //nested loops
+        Console.WriteLine("How many rows");
+        int rows = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("How many columns");
+        int columns = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("What symbol");
+        String symbol = Console.ReadLine();
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < columns; j++)
+            {
+                Console.WriteLine(symbol);
+            }
+            Console.WriteLine();
         }
 
-        Console.ReadKey();
+        //number guessing game
     }
 }
