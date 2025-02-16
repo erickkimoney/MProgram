@@ -3,7 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 
 internal class Program
 {
-    private static void Main(string[] args)
+    static void Main(string[] args)
     {
         //Find the hypotenuse
         //Console.WriteLine("Enter Triangle side A: ");
@@ -127,22 +127,171 @@ internal class Program
         //Console.WriteLine("Happy new year");
 
         //nested loops
-        Console.WriteLine("How many rows");
-        int rows = Convert.ToInt32(Console.ReadLine());
+        //Console.WriteLine("How many rows");
+        //int rows = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("How many columns");
-        int columns = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("What symbol");
-        String symbol = Console.ReadLine();
-        for (int i = 0; i < rows; i++)
-        {
-            for (int j = 0; j < columns; j++)
-            {
-                Console.WriteLine(symbol);
-            }
-            Console.WriteLine();
-        }
+        //Console.WriteLine("How many columns");
+        //int columns = Convert.ToInt32(Console.ReadLine());
+        //Console.WriteLine("What symbol");
+        //String symbol = Console.ReadLine();
+        //for (int i = 0; i < rows; i++)
+        //{
+        //    for (int j = 0; j < columns; j++)
+        //    {
+        //        Console.WriteLine(symbol);
+        //    }
+        //    Console.WriteLine();
+        //}
 
         //number guessing game
+        //Random random = new Random();
+        //bool playagain = true;
+        //int min = 1;
+        //int max = 100;
+        //int guess;
+        //int number;
+        //int guesses;
+        //String response;
+
+        //while (playagain)
+        //{
+        //    guess = 0;
+        //    guesses = 0;
+        //    response = "";
+        //    number = random.Next(min, max + 1);
+
+        //    while (guess != number)
+        //    {
+        //        Console.WriteLine("Guess a number between" + max + "-" + min + ":");
+        //        guess = Convert.ToInt32(Console.ReadLine());
+        //        Console.WriteLine("Guess: " + guess);
+        //         if (guess > number)
+        //        {
+        //            Console.WriteLine(guess + " is too high");
+        //        }
+        //         else if (guess < number)
+        //                { 
+        //            Console.WriteLine(guess + " is too low"); 
+        //        }
+
+        //        guesses += 1;
+        //    }
+        //    Console.WriteLine("Number: " + number);
+        //    Console.WriteLine("YOU WIN!!");
+        //    Console.WriteLine("Guesses" + guesses);
+        //    Console.WriteLine("Would you like to play again (Y/N): ");
+        //    response = Console.ReadLine();
+        //    response = response.ToUpper();
+        //     if (response == "Y")
+        //    {
+        //        playagain = true;
+        //    }
+        //    else
+        //    {
+        //        playagain = false;
+        //    }
+        //}
+        //Console.WriteLine("Thanks for playing!");
+        //Console.ReadKey();
+
+        //Rock, Paper, Scissors
+        Random random = new Random();
+        bool playagain = true;
+        String player;
+        String computer;
+        String anothergame;
+
+        while (playagain)
+        {
+            player = "";
+            computer = "";
+            while (player != "ROCK" && player != "PAPER" && player != "SCISSORS")
+            {
+                Console.Write("Choose ROCK, PAPER, SCISSORS:");
+                player = Console.ReadLine();
+                player = player.ToUpper();
+            }
+
+            switch (random.Next(0, 4))
+            {
+                case 1:
+                    computer = "ROCK";
+                    break;
+                case 2:
+                    computer = "PAPER";
+                    break;
+                case 3:
+                    computer = "SCISSORS";
+                    break;
+            }
+            Console.WriteLine("Player " + player);
+            Console.WriteLine("Computer " + computer);
+
+            switch (player)
+            {
+                case "ROCK":
+                    if ( computer == "ROCK")
+                    {
+                        Console.WriteLine("It's a draw!");
+                    }
+                    else if ( computer == "PAPER")
+                    {
+                        Console.WriteLine("You lose!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("You win!");
+                    }
+                    break;
+                case "PAPER":
+                    if (computer == "ROCK")
+                    {
+                        Console.WriteLine("You win!");
+                    }
+                    else if (computer == "PAPER")
+                    {
+                        Console.WriteLine("It's a draw!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("You lose!");
+                    }
+
+                    break;
+                case "SCISSORS":
+                    if (computer == "ROCK")
+                    {
+                        Console.WriteLine("You lose!");
+                    }
+                    else if (computer == "PAPER")
+                    {
+                        Console.WriteLine("You win!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("It's a draw!");
+                    }
+
+                    break;
+            }
+            Console.WriteLine("Would you like to play again Y/N: ");
+            anothergame = Console.ReadLine();
+            anothergame = anothergame.ToUpper();
+            if (anothergame == "Y")
+            {
+                playagain = true;
+            }
+            else
+            {
+                playagain = false;
+            }
+
+            Console.WriteLine("Thankyou for playing!");
+        }
+        
+        Console.ReadKey();
+
     }
+
+    
 }
