@@ -385,7 +385,20 @@ internal class Program
         //} while (Console.ReadLine().ToUpper() == "Y");
 
         //array
+        //String[] house = new string[5];
+        ////String[] house = ["chair", "table", "sofa", "bulb", "books"];
+        //house[0] = "chair";
+        //house[1] = "table";
+        //house[2] = "sofa";
+        //house[3] = "bulb";
+        //house[4] = "books";
+        ////Console.WriteLine(house[0]);
+        ////Console.WriteLine(house[1]);
+        ////Console.WriteLine(house[2]);
+        //house[0] = "bulb";
+        //for (int i = 0; i < house.Length; i++)
+        //{
+        //    Console.WriteLine(house[i]);
+        //}
     }
-
-    
 }
