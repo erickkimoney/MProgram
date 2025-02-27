@@ -400,5 +400,35 @@ internal class Program
         //{
         //    Console.WriteLine(house[i]);
         //}
-    }
+
+        //foreach loop
+        //String[] house = ["chair", "table", "sofa", "bulb", "books"];
+        //foreach(String item in house)
+        //{
+        //    Console.WriteLine(item);
+        //}
+       
+    //    //methods
+    //    int age = 21;
+    //    String name = "Erick";
+    //    String last_name = "Kimani";
+    //    singHappyBirthday(age, name, last_name);
+    //    singHappyBirthday(age, name, last_name);
+    //    singHappyBirthday(age, name, last_name);
+    //}
+
+
+
+
+
+
+
+    //static void singHappyBirthday(int age, String name, String last_name)
+    //{
+    //    Console.WriteLine("Happy birthday to you!");
+    //    Console.WriteLine("Happy birthday to you!");
+    //    Console.WriteLine($"Happy birthday dear {name}!");
+    //    Console.WriteLine($"Happy birthday dear {last_name}!");
+    //    Console.WriteLine($"You are {age} years old now");
+    //}
 }
