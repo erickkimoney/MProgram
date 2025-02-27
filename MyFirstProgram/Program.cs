@@ -407,20 +407,35 @@ internal class Program
         //{
         //    Console.WriteLine(item);
         //}
-       
-    //    //methods
-    //    int age = 21;
-    //    String name = "Erick";
-    //    String last_name = "Kimani";
-    //    singHappyBirthday(age, name, last_name);
-    //    singHappyBirthday(age, name, last_name);
-    //    singHappyBirthday(age, name, last_name);
+
+        //    //methods
+        //    int age = 21;
+        //    String name = "Erick";
+        //    String last_name = "Kimani";
+        //    singHappyBirthday(age, name, last_name);
+        //    singHappyBirthday(age, name, last_name);
+        //    singHappyBirthday(age, name, last_name);
+
+        //return keyword
+        //double x;
+        //double y;
+        //double result;
+
+        //Console.Write("Enter number 1: ");
+        //x = Convert.ToDouble(Console.ReadLine());
+
+        //Console.Write("Enter number 2: ");
+        //y = Convert.ToDouble(Console.ReadLine());
+
+        //result = multiply(x, y);
+        //Console.WriteLine($"Answer is {result}");
+
+    }
+    //static double multiply(double x, double y)
+    //{
+    //   return x * y;
+        
     //}
-
-
-
-
-
 
 
     //static void singHappyBirthday(int age, String name, String last_name)
