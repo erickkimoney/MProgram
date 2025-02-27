@@ -292,53 +292,99 @@ internal class Program
         //Console.ReadKey();
 
         //dice roll
-        Console.WriteLine("---------------");
-        Console.WriteLine("Roll the dice");
-        Console.WriteLine("---------------");
+        //Console.WriteLine("---------------");
+        //Console.WriteLine("Roll the dice");
+        //Console.WriteLine("---------------");
 
-        Random random = new Random();
-        String roll_dice;
-        int min = 1;
-        int max = 6;
-        bool playagain = true;
-        String response;
+        //Random random = new Random();
+        //String roll_dice;
+        //int min = 1;
+        //int max = 6;
+        //bool playagain = true;
+        //String response;
 
-        while (playagain)
-        {
-            switch (random.Next(min, max + 1))
-            {
-                case 1:
-                    Console.WriteLine("1");
-                    break;
-                case 2:
-                    Console.WriteLine("2");
-                    break;
-                case 3:
-                    Console.WriteLine("3");
-                    break;
-                case 4:
-                    Console.WriteLine("4");
-                    break;
-                case 5:
-                    Console.WriteLine("5");
-                    break;
-                case 6:
-                    Console.WriteLine("6");
-                    break;
-            }
-            Console.WriteLine("Play again Y/N? ");
-            response = Console.ReadLine();
-            response = response.ToUpper();
-            if (response == "Y")
-            {
-                playagain = true;
-            }
-            else
-            {
-                playagain = false;
-            }
-        }
+        //while (playagain)
+        //{
+        //    switch (random.Next(min, max + 1))
+        //    {
+        //        case 1:
+        //            Console.WriteLine("1");
+        //            break;
+        //        case 2:
+        //            Console.WriteLine("2");
+        //            break;
+        //        case 3:
+        //            Console.WriteLine("3");
+        //            break;
+        //        case 4:
+        //            Console.WriteLine("4");
+        //            break;
+        //        case 5:
+        //            Console.WriteLine("5");
+        //            break;
+        //        case 6:
+        //            Console.WriteLine("6");
+        //            break;
+        //    }
+        //    Console.WriteLine("Play again Y/N? ");
+        //    response = Console.ReadLine();
+        //    response = response.ToUpper();
+        //    if (response == "Y")
+        //    {
+        //        playagain = true;
+        //    }
+        //    else
+        //    {
+        //        playagain = false;
+        //    }
+        //}
 
+        //calculator program
+        //do
+        //{
+        //    Console.WriteLine("------------------");
+        //    Console.WriteLine("Calculator Program");
+        //    Console.WriteLine("------------------");
+
+        //    double num_1 = 0;
+        //    double num_2 = 0;
+        //    double result = 0;
+
+        //    Console.Write("Enter number 1: ");
+        //    num_1 = Convert.ToDouble(Console.ReadLine());
+
+        //    Console.Write("Enter number 2: ");
+        //    num_2 = Convert.ToDouble(Console.ReadLine());
+
+        //    Console.WriteLine("\tChoose operator");
+        //    Console.WriteLine("\t+ for addition");
+        //    Console.WriteLine("\t- for subtraction");
+        //    Console.WriteLine("\t* for multiplication");
+        //    Console.WriteLine("\t/ for division");
+        //    Console.Write("Choose an option: ");
+        //    switch (Console.ReadLine())
+        //    {
+        //        case "+":
+        //            result = num_1 + num_2;
+        //            Console.WriteLine($"result of {num_1} + {num_2} = " + result);
+        //            break;
+        //        case "-":
+        //            result = num_1 - num_2;
+        //            Console.WriteLine($"result of {num_1} - {num_2} = " + result);
+        //            break;
+        //        case "*":
+        //            result = num_1 * num_2;
+        //            Console.WriteLine($"result of {num_1} * {num_2} = " + result);
+        //            break;
+        //        case "/":
+        //            result = num_1 / num_2;
+        //            Console.WriteLine($"result of {num_1} / {num_2} = " + result);
+        //            break;
+        //    }
+        //    Console.WriteLine("Would you like to calculate again Y = Yes N = No");
+        //} while (Console.ReadLine().ToUpper() == "Y");
+
+        //array
     }
 
     
