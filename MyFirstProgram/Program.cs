@@ -428,13 +428,68 @@ internal class Program
         //y = Convert.ToDouble(Console.ReadLine());
 
         //result = multiply(x, y);
-        //Console.WriteLine($"Answer is {result}");
+        //Console.WriteLine($"Answer is {result}")
 
+        //method overloading
+        //double total;
+
+        //total = multiply(2, 3, 10);
+        //Console.WriteLine($"the answer is {total }");
+
+        //params keyword
+        /*  double total;
+          total = Checkout(20, 30, 40);
+
+          Console.WriteLine($"The total price is {total}");*/
+        //try, catch finally
+        double a;
+        double b;
+       
+        double result;
+
+        try
+        {
+            Console.Write("Enter number: ");
+            a = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter number: ");
+            b = Convert.ToDouble(Console.ReadLine());
+
+            result = a / b;
+            Console.WriteLine($"The answer is {result}");
+        }
+        catch (FormatException e)
+        {
+            Console.WriteLine("Only accepts integers");
+        }
+        catch (DivideByZeroException)
+        {
+            Console.WriteLine("Cannot divide by zero IDIOT!!");
+        }
+        finally
+        {
+            Console.WriteLine("Thankyou for trying!!");
+        }
     }
-    //static double multiply(double x, double y)
+
+    //static double Checkout(params double[] prices)
     //{
-    //   return x * y;
-        
+    //    double total = 0;
+    //    foreach (double price in prices)
+    //    {
+    //        total = total + price;
+    //    }
+    //    return total;
+    //}
+
+    /*static double multiply(double x, double y)
+    {
+        return x * y;
+
+    }*/
+    //static double multiply (double x, double y, double z)
+    //{
+    //    return x * y * z;
     //}
 
 
