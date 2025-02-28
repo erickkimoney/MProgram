@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using MyFirstProgram;
+using System.Diagnostics.CodeAnalysis;
 using System.Security.Cryptography.X509Certificates;
 
 internal class Program
@@ -519,18 +520,3 @@ internal class Program
     //}
 }
 
-class Messages
-{
-    public static void Hello()
-    {
-        Console.WriteLine("Hello how are you!");
-    }
-    public static void Wait()
-    {
-        Console.WriteLine("I am waiting!");
-    }
-    public static void execute()
-    {
-        Console.WriteLine("Execute that timeline");
-    }
-}
