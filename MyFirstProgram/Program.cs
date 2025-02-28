@@ -442,7 +442,7 @@ internal class Program
 
           Console.WriteLine($"The total price is {total}");*/
         //try, catch finally
-        double a;
+        /*double a;
         double b;
        
         double result;
@@ -469,7 +469,23 @@ internal class Program
         finally
         {
             Console.WriteLine("Thankyou for trying!!");
-        }
+        }*/
+
+        //conditional operator
+        /* double temp = 3;
+         String message;
+
+
+             Console.WriteLine(message = (temp >= 15) ? "it's warm outside" : "it's cold outside");*/
+
+        //string interpolation
+        /* String name= "Bruce Locker";
+         int age = 34;
+         *//* Console.WriteLine("Hello " + name);
+          Console.WriteLine("You are " + age + " years old");*//*
+         Console.WriteLine($"Hello {name} You are {age} years old!");
+ */
+        Messages.Hello();
     }
 
     //static double Checkout(params double[] prices)
@@ -501,4 +517,20 @@ internal class Program
     //    Console.WriteLine($"Happy birthday dear {last_name}!");
     //    Console.WriteLine($"You are {age} years old now");
     //}
+}
+
+class Messages
+{
+    public static void Hello()
+    {
+        Console.WriteLine("Hello how are you!");
+    }
+    public static void Wait()
+    {
+        Console.WriteLine("I am waiting!");
+    }
+    public static void execute()
+    {
+        Console.WriteLine("Execute that timeline");
+    }
 }
