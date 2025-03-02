@@ -486,7 +486,37 @@ internal class Program
           Console.WriteLine("You are " + age + " years old");*//*
          Console.WriteLine($"Hello {name} You are {age} years old!");
  */
-        Messages.Hello();
+        //Messages.Hello();
+
+        //objects
+        Human human1 = new Human();
+        Human human2 = new Human();
+
+        human1.name = "Morty";
+        human2.name = "Rick";
+        human1.age = 24;
+        human2.age = 45;
+
+        human1.eat();
+        human1.sleep();
+        human2.eat();
+        human2.sleep();
+
+    }
+
+    class Human()
+    {
+        public String name = "";
+        public int age;
+
+        public void eat()
+        {
+            Console.WriteLine($"{name} is eating!");
+        }
+        public void sleep()
+        {
+            Console.WriteLine($"{name} is sleeping");
+        }
     }
 
     //static double Checkout(params double[] prices)
