@@ -534,31 +534,60 @@ internal class Program
                 Console.WriteLine(garage[1].model);
                 Console.WriteLine(garage[2].model);*/
         //object as arugument
-        Car car1 = new Car("Toyota", "Red");
+       /* Car car1 = new Car("Toyota", "Red");
         Car car2 = Copy(car1);
 
         Console.WriteLine($"{car1.color} {car1.model}");
-        Console.WriteLine($"{car2.color} {car2.model}");
+        Console.WriteLine($"{car2.color} {car2.model}");*/
+
+        //method overriding
+        Dog dog1 = new Dog();
+        Cat cat1 = new Cat();
+
+        dog1.Speak();
+        cat1.Speak();
 
 
         Console.ReadKey();
     }
-   public static Car Copy(Car car)
-    {
-        return new Car(car.model, car.color);
-    }
 
-    public class Car
+    class Animal
     {
-        public String model;
-        public String color;
-
-        public Car(String model, String color)
+        public virtual void Speak()
         {
-            this.model = model;
-            this.color = color;
+            Console.WriteLine("The animal goes ''goes brrr''");
         }
     }
+    class Dog: Animal
+    {
+        public override void Speak()
+        {
+            Console.WriteLine("The dog goes '' woof'");
+        }
+    }
+    class Cat : Animal
+    {
+        public override void Speak()
+        {
+            Console.WriteLine("The cat goes ''meeoow''");
+        }
+    }
+    /* public static Car Copy(Car car)
+      {
+          return new Car(car.model, car.color);
+      }
+
+      public class Car
+      {
+          public String model;
+          public String color;
+
+          public Car(String model, String color)
+          {
+              this.model = model;
+              this.color = color;
+          }
+      }*/
 
     /*abstract class vehicle
     {
