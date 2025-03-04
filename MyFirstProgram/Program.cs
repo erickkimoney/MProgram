@@ -491,9 +491,11 @@ internal class Program
         //objects
 
         //inheritance
+        //abstract modifier -  to indicate that a class is incomplete and cannnot instantiate objects
         car car = new car();
         bicycle bicycle = new bicycle();
         boat boat = new boat();
+        vehicle vehicle1 = new vehicle();
 
         Console.WriteLine(car.speed);
         Console.WriteLine(car.wheel);
@@ -510,7 +512,7 @@ internal class Program
         Console.ReadKey();
     }
 
-    class vehicle
+    abstract class vehicle
     {
         public int speed = 0;
          
@@ -522,14 +524,17 @@ internal class Program
     class car :vehicle
     {
         public int wheel = 4;
+        int maxspeed = 400;
     }
     class bicycle : vehicle
     {
         public int wheel = 2;
+        int maxspeed = 200;
     }
     class boat : vehicle
     {
         public int wheel = 0;
+        int maxspeed = 100;
     }
 
     /*class Car()
