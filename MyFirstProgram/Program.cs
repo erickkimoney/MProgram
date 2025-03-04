@@ -489,35 +489,62 @@ internal class Program
         //Messages.Hello();
 
         //objects
-        Human human1 = new Human();
-        Human human2 = new Human();
 
-        human1.name = "Morty";
-        human2.name = "Rick";
-        human1.age = 24;
-        human2.age = 45;
+        //inheritance
+        car car = new car();
+        bicycle bicycle = new bicycle();
+        boat boat = new boat();
 
-        human1.eat();
-        human1.sleep();
-        human2.eat();
-        human2.sleep();
+        Console.WriteLine(car.speed);
+        Console.WriteLine(car.wheel);
+        car.go();
 
+        Console.WriteLine(bicycle.speed);
+        Console.WriteLine(bicycle.wheel);
+        bicycle.go();
+
+        Console.WriteLine(boat.speed);
+        Console.WriteLine(boat.wheel);
+        boat.go();
+
+        Console.ReadKey();
     }
 
-    class Human()
+    class vehicle
     {
-        public String name = "";
-        public int age;
-
-        public void eat()
+        public int speed = 0;
+         
+        public void go ()
         {
-            Console.WriteLine($"{name} is eating!");
-        }
-        public void sleep()
-        {
-            Console.WriteLine($"{name} is sleeping");
+            Console.WriteLine("The vehicle is moving");
         }
     }
+    class car :vehicle
+    {
+        public int wheel = 4;
+    }
+    class bicycle : vehicle
+    {
+        public int wheel = 2;
+    }
+    class boat : vehicle
+    {
+        public int wheel = 0;
+    }
+
+    /*class Car()
+    {
+        String make;
+        String model;
+        int year;
+        String color;
+        
+        public Car()
+        { 
+        
+        }
+    }*/
+
 
     //static double Checkout(params double[] prices)
     //{
