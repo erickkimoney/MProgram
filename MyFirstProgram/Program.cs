@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Collections.Generic;
 using System.Numerics;
+using System.Threading;
 
 internal class Program
 {
@@ -650,26 +651,66 @@ internal class Program
 
         //generic use <T>
 
-        int[] intArray = { 1, 2, 3 };
-        double[] doubleArray = { 1.0, 2.0, 3.0 };
-        String[] stringArray = {"1", "2", "3" };
+        /* int[] intArray = { 1, 2, 3 };
+         double[] doubleArray = { 1.0, 2.0, 3.0 };
+         String[] stringArray = {"1", "2", "3" };
 
-        displayElements(intArray);
-        displayElements(doubleArray);
-        displayElements(stringArray);
+         displayElements(intArray);
+         displayElements(doubleArray);
+         displayElements(stringArray);*/
 
+        //Multithreading
+        /*thread - an execution path of a program
+                   we can use multiple thread at the same time
+                    current thread running is main thread
+                    using System.Threading;
+        */
+
+        Thread mainThread = Thread.CurrentThread;
+        mainThread.Name = "mainThread";
+        //Console.WriteLine(mainThread.Name);
+
+        Thread thread1 = new Thread(() => countDown("First counter: "));
+        Thread thread2 = new Thread(() => countUp("Second counter: "));
+        thread1.Start();
+        thread2.Start();
+
+       /* countDown();
+        countUp();*/
         Console.ReadKey();
     }
 
-      public static void displayElements<T>(T[] array)
+    public static void countDown(String name)
     {
-        foreach (T  item in array)
+        for (int i = 10; i >= 0; i--)
         {
-            Console.Write($"{item} ");
-        }
-        Console.WriteLine();
+            Console.WriteLine($"Timer #1 is {i} seconds");
+            Thread.Sleep(1000);
 
+        }
+        Console.WriteLine("Timer 1 is complete!");
     }
+
+        public static void countUp(String name)
+    {
+        for (int i = 0; i <= 10; i++)
+        {
+            Console.WriteLine($"Timer #2 is {i} seconds");
+            Thread.Sleep(1000);
+
+        }
+        Console.WriteLine("Timer 2 is complete!");
+    }
+
+    /*public static void displayElements<T>(T[] array)
+  {
+      foreach (T  item in array)
+      {
+          Console.Write($"{item} ");
+      }
+      Console.WriteLine();
+
+  }*/
 
     /* public static double Volume(PlanetRadius radius)
        {
