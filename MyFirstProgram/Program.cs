@@ -1,5 +1,6 @@
 ﻿using MyFirstProgram;
 using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 
 internal class Program
@@ -492,27 +493,74 @@ internal class Program
 
         //inheritance
         //abstract modifier -  to indicate that a class is incomplete and cannnot instantiate objects
-        car car = new car();
-        bicycle bicycle = new bicycle();
-        boat boat = new boat();
-        vehicle vehicle1 = new vehicle();
 
-        Console.WriteLine(car.speed);
-        Console.WriteLine(car.wheel);
-        car.go();
 
-        Console.WriteLine(bicycle.speed);
-        Console.WriteLine(bicycle.wheel);
-        bicycle.go();
+        /*        car car = new car();
+                bicycle bicycle = new bicycle();
+                boat boat = new boat();
+                vehicle vehicle1 = new vehicle();
 
-        Console.WriteLine(boat.speed);
-        Console.WriteLine(boat.wheel);
-        boat.go();
+                Console.WriteLine(car.speed);
+                Console.WriteLine(car.wheel);
+                car.go();
+
+                Console.WriteLine(bicycle.speed);
+                Console.WriteLine(bicycle.wheel);
+                bicycle.go();
+
+                Console.WriteLine(boat.speed);
+                Console.WriteLine(boat.wheel);
+                boat.go();
+        */
+
+        //array of objects
+
+        /*        car[] garage = new car[3];
+
+                car car1 = new car("Mustang");
+                car car2 = new car("Chevrolette");
+                car car3 = new car("Subaru");
+
+                garage[0] = car1;
+                garage[1] = car2;
+                garage[2] = car3;
+
+                foreach(car car in garage)
+                {
+                    Console.WriteLine(car.model);
+                }
+
+                Console.WriteLine(garage[0].model);
+                Console.WriteLine(garage[1].model);
+                Console.WriteLine(garage[2].model);*/
+        //object as arugument
+        Car car1 = new Car("Toyota", "Red");
+        Car car2 = Copy(car1);
+
+        Console.WriteLine($"{car1.color} {car1.model}");
+        Console.WriteLine($"{car2.color} {car2.model}");
+
 
         Console.ReadKey();
     }
+   public static Car Copy(Car car)
+    {
+        return new Car(car.model, car.color);
+    }
 
-    abstract class vehicle
+    public class Car
+    {
+        public String model;
+        public String color;
+
+        public Car(String model, String color)
+        {
+            this.model = model;
+            this.color = color;
+        }
+    }
+
+    /*abstract class vehicle
     {
         public int speed = 0;
          
@@ -535,7 +583,7 @@ internal class Program
     {
         public int wheel = 0;
         int maxspeed = 100;
-    }
+    }*/
 
     /*class Car()
     {
