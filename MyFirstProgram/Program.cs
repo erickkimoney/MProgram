@@ -608,26 +608,74 @@ internal class  Program
 
         //List of objects
 
-        List<Player> players = new List<Player>();
-        //Player player1 = new Player("Erick");
-        //Player player2 = new Player("Chad");
-        //Player player3 = new Player("Kyle");
-        //Player player4 = new Player("Lewis");
+        /*  List<Player> players = new List<Player>();
+          //Player player1 = new Player("Erick");
+          //Player player2 = new Player("Chad");
+          //Player player3 = new Player("Kyle");
+          //Player player4 = new Player("Lewis");
 
-        players.Add(new Player ("Erick"));
-        players.Add(new Player("Chad"));
-        players.Add(new Player("Kyle"));
-        players.Add(new Player("Lewis"));
+          players.Add(new Player ("Erick"));
+          players.Add(new Player("Chad"));
+          players.Add(new Player("Kyle"));
+          players.Add(new Player("Lewis"));
 
-        foreach (Player player in players)
-        {
-            Console.WriteLine(player);
-        }
+          foreach (Player player in players)
+          {
+              Console.WriteLine(player);
+          }*/
 
+        //Getter and Setters
+
+        /*Car car1 = new Car(400);
+        car1.Speed = 1000000;
+
+        Console.WriteLine(car1.Speed);*/
+
+        //Auto-implemeted properties
+
+        Car car1 = new Car("Porsche");
+        Console.WriteLine(car1.Model);
+        
         Console.ReadKey();
     }
 
-    class Player
+    class Car
+    {
+    
+        public String Model { get; set; }
+
+        public Car(String model)
+        {
+            this.Model = model;
+        }
+    }
+
+    /*class Car
+    {
+        private int speed;
+         public Car(int speed)
+        {
+            this.Speed = speed;
+        }
+
+        public int Speed
+        {
+            get { return speed; }
+            set
+            {
+                if (value > 100)
+                {
+                    speed = 500;
+                }
+                else
+                {
+                    speed = value;
+                }
+            }
+        }
+    }*/
+
+   /* class Player
     {
         public String Username;
 
@@ -640,7 +688,7 @@ internal class  Program
             return Username;
         }
     }
-
+*/
     /*interface IPrey
     {
         void Flee();
