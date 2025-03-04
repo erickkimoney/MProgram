@@ -549,13 +549,56 @@ internal class Program
 
  */      //ToString() - convert a method to string representation
 
-        Car car1 = new Car("Toyota", "Corolla", 2011, "Blue");
+       /* Car car1 = new Car("Toyota", "Corolla", 2011, "Blue");
 
-        Console.WriteLine(car1.ToString());
+        Console.WriteLine(car1.ToString());*/
+
+        //polymorphism - objects can be identified by more than one type
+
+        Car car1 = new Car();
+        Bicycle bicycle1 = new Bicycle();
+        Boat boat1 = new Boat();
+
+        Vehicle[] vehicles = {car1,  bicycle1, boat1};
+
+        foreach(Vehicle vehicle in vehicles)
+        {
+            vehicle.Go();
+        }
+
         Console.ReadKey();
     }
 
-    class Car
+    class Vehicle
+    {
+        public virtual void Go()
+        {
+            Console.WriteLine("The car is moving!");
+        }
+    }
+    class Car : Vehicle
+    {
+        public override void Go()
+        {
+            Console.WriteLine("The car is moving!");
+        }
+    }
+    class Bicycle : Vehicle
+    {
+        public override void Go()
+        {
+            Console.WriteLine("The bicycle is moving!");
+        }
+    }
+    class Boat : Vehicle
+    {
+        public override void Go()
+        {
+            Console.WriteLine("The boat is moving!");
+        }   
+    }
+
+    /*class Car
     {
         String make;
         public String model;
@@ -572,7 +615,7 @@ internal class Program
         {
             return $"This car is {make} {model} {year} {color} in color";
         }
-    }
+    }*/
 
     /*class Animal
     {
