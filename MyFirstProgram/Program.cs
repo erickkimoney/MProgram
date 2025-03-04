@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Collections.Generic;
 using System.Numerics;
 
-internal class  Program
+internal class Program
 {
     static void Main(string[] args)
     {
@@ -638,27 +638,48 @@ internal class  Program
         */
         //enums
 
-        Console.WriteLine($"{Planets.Earth} is planet number {(int)Planets.Earth}");
-        Console.WriteLine($"{Planets.Pluto} is planet number {(int)Planets.Pluto}");
+        /* Console.WriteLine($"{Planets.Earth} is planet number {(int)Planets.Earth}");
+         Console.WriteLine($"{Planets.Pluto} is planet number {(int)Planets.Pluto}");
 
-        String name = PlanetRadius.Earth.ToString();
-        int radius = (int)PlanetRadius.Earth;
-        double volume = Volume(PlanetRadius.Earth);
-        Console.WriteLine($"This is planet {name}");
-        Console.WriteLine($"It's radius is {radius}km");
-        Console.WriteLine($"The volume of planet {name} is {volume}km^3");
+         String name = PlanetRadius.Earth.ToString();
+         int radius = (int)PlanetRadius.Earth;
+         double volume = Volume(PlanetRadius.Earth);
+         Console.WriteLine($"This is planet {name}");
+         Console.WriteLine($"It's radius is {radius}km");
+         Console.WriteLine($"The volume of planet {name} is {volume}km^3");*/
+
+        //generic use <T>
+
+        int[] intArray = { 1, 2, 3 };
+        double[] doubleArray = { 1.0, 2.0, 3.0 };
+        String[] stringArray = {"1", "2", "3" };
+
+        displayElements(intArray);
+        displayElements(doubleArray);
+        displayElements(stringArray);
+
         Console.ReadKey();
     }
 
-  public static double Volume(PlanetRadius radius)
+      public static void displayElements<T>(T[] array)
     {
-        double volume = (4.0 / 3.0) * Math.PI * Math.Pow((int)radius, 3);
-        return volume;
+        foreach (T  item in array)
+        {
+            Console.Write($"{item} ");
+        }
+        Console.WriteLine();
+
     }
+
+    /* public static double Volume(PlanetRadius radius)
+       {
+           double volume = (4.0 / 3.0) * Math.PI * Math.Pow((int)radius, 3);
+           return volume;
+       }*/
 
     /*class Car
     {
-    
+
         public String Model { get; set; }
 
         public Car(String model)
@@ -831,7 +852,7 @@ internal class  Program
     /*abstract class vehicle
     {
         public int speed = 0;
-         
+
         public void go ()
         {
             Console.WriteLine("The vehicle is moving");
@@ -859,10 +880,10 @@ internal class  Program
         String model;
         int year;
         String color;
-        
+
         public Car()
         { 
-        
+
         }
     }*/
 
@@ -897,28 +918,28 @@ internal class  Program
     //    Console.WriteLine($"You are {age} years old now");
     //}
 }
-enum Planets
-{
-    Mercury = 1,
-    Venus = 2,
-    Earth = 3,
-    Mars = 4,
-    Jupiter = 5,
-    Saturn = 6,
-    Uranus = 7,
-    Neptune = 8,
-    Pluto = 9
-}
-enum PlanetRadius
-{
-    Mercury = 2440,
-    Venus = 6052,
-    Earth = 6371,
-    Mars = 3390,
-    Jupiter = 69911,
-    Saturn = 58232,
-    Uranus = 25362,
-    Neptune = 24622,
-    Pluto = 1188
-}
+    /*enum Planets
+    {
+        Mercury = 1,
+        Venus = 2,
+        Earth = 3,
+        Mars = 4,
+        Jupiter = 5,
+        Saturn = 6,
+        Uranus = 7,
+        Neptune = 8,
+        Pluto = 9
+    }
+    enum PlanetRadius
+    {
+        Mercury = 2440,
+        Venus = 6052,
+        Earth = 6371,
+        Mars = 3390,
+        Jupiter = 69911,
+        Saturn = 58232,
+        Uranus = 25362,
+        Neptune = 24622,
+        Pluto = 1188
+    }*/
 
