@@ -3,7 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 
-internal class Program
+internal class  Program
 {
     static void Main(string[] args)
     {
@@ -555,7 +555,7 @@ internal class Program
 
         //polymorphism - objects can be identified by more than one type
 
-        Car car1 = new Car();
+        /*Car car1 = new Car();
         Bicycle bicycle1 = new Bicycle();
         Boat boat1 = new Boat();
 
@@ -564,12 +564,60 @@ internal class Program
         foreach(Vehicle vehicle in vehicles)
         {
             vehicle.Go();
-        }
+        }*/
+
+        //interface - defines a contract that all classes inheriting should follow
+
+        /*Rabbit rabbit1 = new Rabbit();
+        Hawk hawk1 = new Hawk();
+        Fish fish1 = new Fish();
+
+        rabbit1.Flee();
+        hawk1.Hunt();
+        fish1.Flee();
+        fish1.Hunt();*/
+
+        //Lists - 
 
         Console.ReadKey();
     }
 
-    class Vehicle
+    /*interface IPrey
+    {
+        void Flee();
+    }
+    interface IPredator
+    {
+        void Hunt();
+    }
+    class Rabbit : IPrey
+    {
+        public void Flee()
+        {
+            Console.WriteLine("The rabbit runs away");
+        }
+    }
+    class Hawk : IPredator
+    {
+        public void Hunt()
+        {
+            Console.WriteLine("The hawk is searching for food");
+        }
+    }
+    class Fish : IPrey, IPredator
+    {
+        public void Flee()
+        {
+            Console.WriteLine("The fish swims away");
+        }
+        public void Hunt()
+        {
+            Console.WriteLine("The fish is seearching for food");
+        }
+    }*/
+
+
+    /*class Vehicle
     {
         public virtual void Go()
         {
@@ -596,7 +644,7 @@ internal class Program
         {
             Console.WriteLine("The boat is moving!");
         }   
-    }
+    }*/
 
     /*class Car
     {
