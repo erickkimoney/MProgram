@@ -2,6 +2,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
+using System.Collections.Generic;
 
 internal class  Program
 {
@@ -549,9 +550,9 @@ internal class  Program
 
  */      //ToString() - convert a method to string representation
 
-       /* Car car1 = new Car("Toyota", "Corolla", 2011, "Blue");
+        /* Car car1 = new Car("Toyota", "Corolla", 2011, "Blue");
 
-        Console.WriteLine(car1.ToString());*/
+         Console.WriteLine(car1.ToString());*/
 
         //polymorphism - objects can be identified by more than one type
 
@@ -577,7 +578,32 @@ internal class  Program
         fish1.Flee();
         fish1.Hunt();*/
 
-        //Lists - 
+        //Lists - represents a lisst of objects that can be accessd by index,  can increase or decrease dynamically
+
+        List<String> food = new List<String>();
+
+        food.Add("pizza");
+        food.Add("bread");
+        food.Add("tomato");
+        food.Add("ham");
+        food.Add("fish");
+        food.Add("cake");
+
+        //food.Remove("ham");
+        /*  food.Insert(0, "sushi");
+
+          Console.WriteLine(food.Count);*/
+        //Console.WriteLine(food.LastIndexOf("cake"));
+        //Console.WriteLine(food.Contains("taco"));
+        //food.Sort();
+        food.Reverse();
+        food.Clear();
+
+
+        foreach (String item in food)
+        {
+            Console.WriteLine(item);
+        }
 
         Console.ReadKey();
     }
