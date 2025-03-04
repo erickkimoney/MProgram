@@ -534,24 +534,47 @@ internal class Program
                 Console.WriteLine(garage[1].model);
                 Console.WriteLine(garage[2].model);*/
         //object as arugument
-       /* Car car1 = new Car("Toyota", "Red");
-        Car car2 = Copy(car1);
+        /* Car car1 = new Car("Toyota", "Red");
+         Car car2 = Copy(car1);
 
-        Console.WriteLine($"{car1.color} {car1.model}");
-        Console.WriteLine($"{car2.color} {car2.model}");*/
+         Console.WriteLine($"{car1.color} {car1.model}");
+         Console.WriteLine($"{car2.color} {car2.model}");*/
 
         //method overriding
-        Dog dog1 = new Dog();
-        Cat cat1 = new Cat();
+        /* Dog dog1 = new Dog();
+         Cat cat1 = new Cat();
 
-        dog1.Speak();
-        cat1.Speak();
+         dog1.Speak();
+         cat1.Speak();
 
+ */      //ToString() - convert a method to string representation
 
+        Car car1 = new Car("Toyota", "Corolla", 2011, "Blue");
+
+        Console.WriteLine(car1.ToString());
         Console.ReadKey();
     }
 
-    class Animal
+    class Car
+    {
+        String make;
+        public String model;
+        int year;
+        String color;
+        public Car(String make, String model, int year, String color)
+        {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+            this.color = color;
+        }
+        public override string ToString()
+        {
+            return $"This car is {make} {model} {year} {color} in color";
+        }
+    }
+
+    /*class Animal
     {
         public virtual void Speak()
         {
@@ -571,7 +594,7 @@ internal class Program
         {
             Console.WriteLine("The cat goes ''meeoow''");
         }
-    }
+    }*/
     /* public static Car Copy(Car car)
       {
           return new Car(car.model, car.color);
