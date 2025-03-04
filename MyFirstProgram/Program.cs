@@ -3,6 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Collections.Generic;
+using System.Numerics;
 
 internal class  Program
 {
@@ -580,32 +581,64 @@ internal class  Program
 
         //Lists - represents a lisst of objects that can be accessd by index,  can increase or decrease dynamically
 
-        List<String> food = new List<String>();
+        /* List<String> food = new List<String>();
 
-        food.Add("pizza");
-        food.Add("bread");
-        food.Add("tomato");
-        food.Add("ham");
-        food.Add("fish");
-        food.Add("cake");
+         food.Add("pizza");
+         food.Add("bread");
+         food.Add("tomato");
+         food.Add("ham");
+         food.Add("fish");
+         food.Add("cake");
 
-        //food.Remove("ham");
-        /*  food.Insert(0, "sushi");
+         //food.Remove("ham");
+         *//*  food.Insert(0, "sushi");
 
-          Console.WriteLine(food.Count);*/
-        //Console.WriteLine(food.LastIndexOf("cake"));
-        //Console.WriteLine(food.Contains("taco"));
-        //food.Sort();
-        food.Reverse();
-        food.Clear();
+           Console.WriteLine(food.Count);*//*
+         //Console.WriteLine(food.LastIndexOf("cake"));
+         //Console.WriteLine(food.Contains("taco"));
+         //food.Sort();
+         food.Reverse();
+         food.Clear();
 
 
-        foreach (String item in food)
+         foreach (String item in food)
+         {
+             Console.WriteLine(item);
+         }*/
+
+        //List of objects
+
+        List<Player> players = new List<Player>();
+        //Player player1 = new Player("Erick");
+        //Player player2 = new Player("Chad");
+        //Player player3 = new Player("Kyle");
+        //Player player4 = new Player("Lewis");
+
+        players.Add(new Player ("Erick"));
+        players.Add(new Player("Chad"));
+        players.Add(new Player("Kyle"));
+        players.Add(new Player("Lewis"));
+
+        foreach (Player player in players)
         {
-            Console.WriteLine(item);
+            Console.WriteLine(player);
         }
 
         Console.ReadKey();
+    }
+
+    class Player
+    {
+        public String Username;
+
+        public Player(String Username)
+        {
+            this.Username = Username;
+        }
+        public override string ToString()
+        {
+            return Username;
+        }
     }
 
     /*interface IPrey
