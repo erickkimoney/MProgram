@@ -633,13 +633,30 @@ internal class  Program
 
         //Auto-implemeted properties
 
-        Car car1 = new Car("Porsche");
-        Console.WriteLine(car1.Model);
-        
+        /*        Car car1 = new Car("Porsche");
+                Console.WriteLine(car1.Model);
+        */
+        //enums
+
+        Console.WriteLine($"{Planets.Earth} is planet number {(int)Planets.Earth}");
+        Console.WriteLine($"{Planets.Pluto} is planet number {(int)Planets.Pluto}");
+
+        String name = PlanetRadius.Earth.ToString();
+        int radius = (int)PlanetRadius.Earth;
+        double volume = Volume(PlanetRadius.Earth);
+        Console.WriteLine($"This is planet {name}");
+        Console.WriteLine($"It's radius is {radius}km");
+        Console.WriteLine($"The volume of planet {name} is {volume}km^3");
         Console.ReadKey();
     }
 
-    class Car
+  public static double Volume(PlanetRadius radius)
+    {
+        double volume = (4.0 / 3.0) * Math.PI * Math.Pow((int)radius, 3);
+        return volume;
+    }
+
+    /*class Car
     {
     
         public String Model { get; set; }
@@ -648,7 +665,8 @@ internal class  Program
         {
             this.Model = model;
         }
-    }
+    }*/
+
 
     /*class Car
     {
@@ -675,20 +693,20 @@ internal class  Program
         }
     }*/
 
-   /* class Player
-    {
-        public String Username;
+    /* class Player
+     {
+         public String Username;
 
-        public Player(String Username)
-        {
-            this.Username = Username;
-        }
-        public override string ToString()
-        {
-            return Username;
-        }
-    }
-*/
+         public Player(String Username)
+         {
+             this.Username = Username;
+         }
+         public override string ToString()
+         {
+             return Username;
+         }
+     }
+ */
     /*interface IPrey
     {
         void Flee();
@@ -878,5 +896,29 @@ internal class  Program
     //    Console.WriteLine($"Happy birthday dear {last_name}!");
     //    Console.WriteLine($"You are {age} years old now");
     //}
+}
+enum Planets
+{
+    Mercury = 1,
+    Venus = 2,
+    Earth = 3,
+    Mars = 4,
+    Jupiter = 5,
+    Saturn = 6,
+    Uranus = 7,
+    Neptune = 8,
+    Pluto = 9
+}
+enum PlanetRadius
+{
+    Mercury = 2440,
+    Venus = 6052,
+    Earth = 6371,
+    Mars = 3390,
+    Jupiter = 69911,
+    Saturn = 58232,
+    Uranus = 25362,
+    Neptune = 24622,
+    Pluto = 1188
 }
 
